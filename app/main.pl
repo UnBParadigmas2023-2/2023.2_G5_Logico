@@ -42,17 +42,17 @@ recomendar_por_nome :-
     menu.
 
 recomendar_por_plataforma :-
-    writeln("Digite a plataforma dos jogos que você deseja:"),
+    writeln("Digite a plataforma dos jogos que você deseja(Coloque aspas simples no começo e no final):"),
     read(Plataforma),
     jogo(_, Nome, Plataforma, Ano, Genero, _),
     write(Nome), write(' - '), write(Plataforma), write(' - '), write(Ano), write(' - '), write(Genero), nl,
     fail.
-    menu.
 
 recomendar_por_ano :-
     writeln("Digite o ano dos jogos que você está interessado:"),
-    read(Ano),
-    menu.
+    read(Ano),jogo(_, Nome, Plataforma, Ano, Genero, _),
+    write(Nome), write(' - '), write(Plataforma), write(' - '), write(Ano), write(' - '), write(Genero), nl,
+    fail.
 
 busca_personalizada :-
     writeln("Digite a plataforma dos jogos que você deseja:"),
@@ -62,4 +62,5 @@ busca_personalizada :-
     writeln("Digite o genero dos jogos que você está interessado:"),
     read(gender),
     menu.
+
 
