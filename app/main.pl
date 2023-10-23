@@ -16,7 +16,7 @@ menu :-
     writeln("5. Sair"),
     read(Opcao),
     (
-        Opcao =:= 0 -> exemplo_busca;
+        Opcao =:= 0 -> writeln('Você está buscando jogos do ano 2010, no estilo de Plataforma'),exemplo_busca;
         Opcao =:= 1 -> recomendar_por_nome;
         Opcao =:= 2 -> recomendar_por_plataforma;
         Opcao =:= 3 -> recomendar_por_ano;
@@ -25,12 +25,12 @@ menu :-
         writeln("Opção inválida. Tente novamente."),
         menu
     ).
-
 exemplo_busca :-
-    jogo(_, Nome, _, 2010, 'Platform', _),
-    write(Nome), nl,
+    jogo(_, Nome, Video, 2010, 'Platform', _),
+    write(Nome),write(' - '),write(Video), nl,
     fail.
-    menu.
+exemplo_busca :- menu.
+
 
 recomendar_por_nome :-
     writeln("Digite o nome do jogo que você está procurando:"),
@@ -44,6 +44,9 @@ recomendar_por_nome :-
 recomendar_por_plataforma :-
     writeln("Digite a plataforma dos jogos que você deseja:"),
     read(Plataforma),
+    jogo(_, Nome, Plataforma, Ano, Genero, _),
+    write(Nome), write(' - '), write(Plataforma), write(' - '), write(Ano), write(' - '), write(Genero), nl,
+    fail.
     menu.
 
 recomendar_por_ano :-
