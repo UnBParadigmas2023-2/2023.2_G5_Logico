@@ -17,23 +17,25 @@ main :-
 menu :-
     writeln("Bem-vindo ao Sistema de Recomendação de Jogos!"),
     writeln("Escolha uma opção:"),
-    writeln("---------------------------------------"),
-    writeln("|0. | Exemplo de busca                |"),
-    writeln("---------------------------------------"),
-    writeln("|1. | Recomendar jogos por nome       |"),
-    writeln("---------------------------------------"),
-    writeln("|2. | Recomendar jogos por plataforma |"),
-    writeln("---------------------------------------"),
-    writeln("|3. | Recomendar jogos por ano        |"),
-    writeln("---------------------------------------"),
-    writeln("|4. | Recomendar jogos por gênero     |"),
-    writeln("---------------------------------------"),
-    writeln("|5. | Recomendar jogos por publicadora|"),
-    writeln("---------------------------------------"),
-    writeln("|6. | Busca personalizada             |"),
-    writeln("---------------------------------------"),
-    writeln("|7. | Sair                            |"),
-    writeln("---------------------------------------"),
+    writeln("----------------------------------------"),
+    writeln("|0. | Exemplo de busca                 |"),
+    writeln("----------------------------------------"),
+    writeln("|1. | Recomendar jogos por nome        |"),
+    writeln("----------------------------------------"),
+    writeln("|2. | Recomendar jogos por plataforma  |"),
+    writeln("----------------------------------------"),
+    writeln("|3. | Recomendar jogos por ano         |"),
+    writeln("----------------------------------------"),
+    writeln("|4. | Recomendar jogos por gênero      |"),
+    writeln("----------------------------------------"),
+    writeln("|5. | Recomendar jogos por publicadora |"),
+    writeln("----------------------------------------"),
+    writeln("|6. | Recomendar por plataforma/genero |"),
+    writeln("----------------------------------------"),
+    writeln("|7. | Busca personalizada              |"),
+    writeln("----------------------------------------"),
+    writeln("|8. | Sair                             |"),
+    writeln("----------------------------------------"),
     read(Opcao),
     (
         Opcao =:= 0 -> writeln('Você está buscando jogos do ano 2010, no estilo de Plataforma'), exemplo_busca;
@@ -41,9 +43,10 @@ menu :-
         Opcao =:= 2 -> recomendar_por_plataforma;
         Opcao =:= 3 -> recomendar_por_ano;
         Opcao =:= 4 -> recomendar_por_genero;
-        Opcao =:= 5 -> recomendar_por_publicadora; 
-        Opcao =:= 6 -> busca_personalizada;     
-        Opcao =:= 7 -> writeln("Obrigado por usar o Sistema de Recomendação de Jogos!"), halt;
+        Opcao =:= 5 -> recomendar_por_publicadora;
+        Opcao =:= 6 -> recomendar_por_plataforma_e_genero; 
+        Opcao =:= 7 -> busca_personalizada;     
+        Opcao =:= 8 -> writeln("Obrigado por usar o Sistema de Recomendação de Jogos!"), halt;
         writeln("Opção inválida. Tente novamente."),
         menu
     ).
@@ -78,6 +81,13 @@ recomendar_por_publicadora :-
     writeln("Digite a publicadora dos jogos que você está interessado:"),
     read(Publicadora),
     listar_jogos_por_publicadora(Publicadora).
+
+recomendar_por_plataforma_e_genero :-
+    writeln("Digite a plataforma dos jogos que você está interessado:"),
+    read(Platafor),
+    writeln("Digite o genero dos jogos que você está interessado:"),
+    read(Gene),
+    listar_jogos_por_plataforma_e_genero(Platafor,Gene).
 
 busca_personalizada :-
     writeln("Digite a plataforma dos jogos que você deseja:"),
@@ -122,6 +132,13 @@ listar_jogos_por_genero(Genero) :-
                 jogo(_, Nome, Plataforma, Ano, Genero, Publicadora),
                 Jogos),
         paginar_e_listar_jogos(Jogos, MaxPorPagina).
+
+listar_jogos_por_plataforma_e_genero(Plataforma, Genero) :-
+    max_jogos_por_pagina(MaxPorPagina),
+    findall(jogo(Nome, Plataforma, Ano, Genero), 
+            jogo(_, Nome, Plataforma, Ano, Genero, _),
+            Jogos),
+    paginar_e_listar_jogos(Jogos, MaxPorPagina).
 
 listar_jogos_personalizados(Plataforma, Ano, Genero) :-
     max_jogos_por_pagina(MaxPorPagina),
