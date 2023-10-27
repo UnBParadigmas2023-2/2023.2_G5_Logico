@@ -23,9 +23,8 @@ O projeto fundamenta-se no uso de um CSV disponibilizado pela Kaggle ([Video Gam
 
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
-![]()
-![]()
-![]()
+![Menu de opções](./img/img1.jpeg)
+![Página de jogos](./img/img2.jpeg)
 
 ## Instalação 
 **Linguagens**: Prolog<br>
