@@ -67,7 +67,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Guilherme Keyti Cabral Kishimoto |  | Excelente |
 | Arthur Taylor |  | Excelente |
 | Iago Cabral | | Excelente |
-| Felipe Alef |  | Excelente |
+| Felipe Alef | Sistema de filtro por publicadora doa jogos | Excelente |
 | Nicolas Roberto |  | Excelente |
 |  Thiago Oliveira |   | Excelente |
 |  José Filipi Brito |  | Excelente |
