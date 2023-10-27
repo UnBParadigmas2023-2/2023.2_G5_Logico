@@ -63,7 +63,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | -- | -- | -- |
 | Matheus Soares | - Definição das estruturas do projeto.<br>- Semear banco de conhecimento prolog com CSV.<br>- Ajuda com sistema de filtro por nome. | Excelente |
 | Pedro Henrique Nogueira |  | Excelente |
-| Guilherme Keyti Cabral Kishimoto |  | Excelente |
+| Guilherme Keyti Cabral Kishimoto | Criação do Menu e logica basica de filtro  | Excelente |
 | Arthur Taylor |  | Excelente |
 | Iago Cabral | criação da estrutura da main | Boa |
 | Felipe Alef | Sistema de filtro por publicadora doa jogos | Excelente |
