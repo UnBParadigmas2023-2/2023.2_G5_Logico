@@ -178,23 +178,28 @@ calcular_total_paginas(Total, MaxPorPagina) :-
 paginar_e_listar_jogos(_, 0, _, _) :-
     writeln("Fim da lista de jogos.").
 
-% Função para paginar e listar jogos
 paginar_e_listar_jogos(Jogos, Total, MaxPorPagina, Pagina) :-
     total_paginas(TotalPaginas),
     PaginaAtual is Pagina + 1,
-    sublist(Jogos, MaxPorPagina, JogosPagina, Resto),
-    listar_jogos(JogosPagina),
-    (Total > MaxPorPagina ->
-        format("Página ~d de ~d~n~n", [PaginaAtual, TotalPaginas]),
-        writeln("Digite '1' para retornar ao menu ou '2' para avançar para a próxima página.");
-    true
+    (PaginaAtual =:= TotalPaginas ->  % Última página
+        NumJogosExibir is Total mod MaxPorPagina;
+        NumJogosExibir is MaxPorPagina
     ),
-    read(Opcao),
-    (Opcao =:= 1 -> menu;
-    Opcao =:= 2 -> paginar_e_listar_jogos(Resto, Total - MaxPorPagina, MaxPorPagina, PaginaAtual);
-    true
+    length(JogosPagina, NumJogosExibir),
+    append(JogosPagina, Resto, Jogos),
+    listar_jogos(JogosPagina),
+    format("Página ~d de ~d~n~n", [PaginaAtual, TotalPaginas]),
+    (PaginaAtual =:= TotalPaginas ->  % Última página
+        writeln("Você chegou a última página! Digite '1' para retornar ao menu."),
+        read(Opcao),
+        (Opcao =:= 1 -> menu; true);
+        writeln("Digite '1' para retornar ao menu ou '2' para avançar para a próxima página."),
+        read(Opcao),
+        (Opcao =:= 1 -> menu;
+         Opcao =:= 2 -> paginar_e_listar_jogos(Resto, Total - NumJogosExibir, MaxPorPagina, PaginaAtual);
+         true
+        )
     ).
-
 listar_jogos([]).
 listar_jogos([jogo(Nome, Plataforma, Ano, Genero) | Resto]) :-
     formatar_jogo(Nome, Plataforma, Ano, Genero),
