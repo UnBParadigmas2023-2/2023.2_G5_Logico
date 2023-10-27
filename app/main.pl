@@ -189,7 +189,7 @@ paginar_e_listar_jogos(Jogos, Total, MaxPorPagina, Pagina) :-
     append(JogosPagina, Resto, Jogos),
     listar_jogos(JogosPagina),
     format("Página ~d de ~d~n~n", [PaginaAtual, TotalPaginas]),
-    (PaginaAtual =:= TotalPaginas ->  % Última página
+    (PaginaAtual =:= TotalPaginas ->
         writeln("Você chegou a última página! Digite '1' para retornar ao menu."),
         read(Opcao),
         (Opcao =:= 1 -> menu; true);
@@ -205,7 +205,6 @@ listar_jogos([jogo(Nome, Plataforma, Ano, Genero) | Resto]) :-
     formatar_jogo(Nome, Plataforma, Ano, Genero),
     listar_jogos(Resto).
 
-% Função para formatar jogos
 formatar_jogo(Nome, Plataforma, Ano, Genero) :-
     write('| '),
     format('~w', [Nome]),
@@ -226,7 +225,3 @@ espacos_em_branco(Texto, Tamanho) :-
     atom_length(Texto, Comprimento),
     Espacos is Tamanho - Comprimento,
     tab(Espacos).
-
-sublist(L, N, Prefix, Suffix) :-
-    length(Prefix, N),
-    append(Prefix, Suffix, L).
