@@ -1,51 +1,53 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
 
-**!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
-
-Paradigmas:
- - Funcional
- - Logico
- - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2023.2_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague esses comentários)
-
-# NomeDoProjeto
+# Game Recommendation
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo (de acordo com a Planilha de Divisão dos Grupos)**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Nro do Grupo (de acordo com a Planilha de Divisão dos Grupos)**: G5<br>
+**Paradigma**: Lógico <br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 19/0094486  | Pedro Henrique Nogueira |
+| 19/0088257  | Guilherme Keyti Cabral Kishimoto|
+| 19/0093480  | Matheus Soares Arruda|
+| 19/0084642  | Arthur Taylor|
+| 19/0088745  | Iago Cabral|
+| 19/0042532  | Felipe Alef|
+| 20/0042360  | Nicolas Roberto|
+| 19/0096071  | Thiago Oliveira|
+| 20/2063346  | José Filipi Brito|  
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
-Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
-Capriche nessa seção, pois ela é a primeira a ser lida pelos interessados no projeto.
+O projeto fundamenta-se no uso de um CSV disponibilizado pela Kaggle ([Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales)) onde a partir dele ocorre a semeação dos Fatos do Prolog, dessa forma possibilitando uma vasta gama de perguntas e recomendações para o usuário. O objetivo é que o usuário seja capaz de descobrir baseado na sua plataforma preferida, data e genêro, todos os jogos que são de sua preferência. Outras pesquisas baseadas em nome também são possíveis.
 
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+![]()
+![]()
+![]()
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-Gifs animados e outras ilustrações são bem-vindos!
+**Linguagens**: Prolog<br>
+**Tecnologias**: SWI-Prolog<br>
+
+``` bash
+sudo apt-get update
+```
+``` bash
+sudo apt-get install swi-prolog
+```
 
 ## Uso 
-Explique como usar seu projeto.
-Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal.
-Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
+Para rodar nosso arquivo main.pl, basta fazer o seguinte:
+
+``` bash
+swipl
+```
+
+``` bash
+? - consult("main.pl").
+```
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
@@ -56,20 +58,39 @@ Procure:
 (iV) Apresentar lições aprendidas, contribuições, pendências, e ideias para trabalhos futuros.
 OBS: TODOS DEVEM PARTICIPAR, CONFERINDO PONTOS DE VISTA.
 TEMPO: +/- 15min
-
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
-| Fulano  |  Programação dos Fatos da Base de Conhecimento Lógica | Boa |
-
+| Matheus Soares | - Definição das estruturas do projeto.<br>- Semear banco de conhecimento prolog com CSV.<br>- Ajuda com sistema de filtro por nome. | Excelente |
+| Pedro Henrique Nogueira |  | Excelente |
+| Guilherme Keyti Cabral Kishimoto |  | Excelente |
+| Arthur Taylor |  | Excelente |
+| Iago Cabral | | Excelente |
+| Felipe Alef |  | Excelente |
+| Nicolas Roberto |  | Excelente |
+|  Thiago Oliveira |   | Excelente |
+|  José Filipi Brito |  | Excelente |
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
-(i) Lições Aprendidas;
-(ii) Percepções;
-(iii) Contribuições e Fragilidades, e
-(iV) Trabalhos Futuros.
+### Lições Aprendidas
+- Transição do Projeto: Tivemos inicialmente dificuldades na criação de um sistema de recomendação de jogos em Prolog devido às complexidades do paradigma lógico e da lógica de inferência.
+- Desafios com Recomendações: A tentativa inicial de construir um sistema de recomendação de jogos revelou-se mais complexa do que o esperado. As recomendações personalizadas exigem uma compreensão profunda das preferências dos usuários e da lógica subjacente, e enfrentamos desafios na obtenção de resultados satisfatórios.
+
+### Contribuições
+- Implementação do Aplicativo de Busca: Conseguimos criar com sucesso um aplicativo de busca que permite aos usuários procurar e acessar informações sobre jogos de forma eficaz. Isso proporcionou uma experiência de usuário útil, apesar das dificuldades iniciais com o sistema de recomendação.
+- Uso Eficiente dos Dados do Kaggle: A capacidade de extrair e utilizar eficazmente dados do Kaggle foi uma das nossas contribuições mais significativas. Isso nos permitiu construir um aplicativo de busca com uma base de dados abrangente de jogos.
+
+### Fragilidades
+- Complexidade do Paradigma Lógico: A complexidade do paradigma lógico, em particular, a lógica de inferência em Prolog, apresentou desafios que inicialmente superaram nossa capacidade de implementar um sistema de recomendação de jogos.
+- Dificuldades com Recomendações: Nossas tentativas iniciais de construir um sistema de recomendação de jogos não atingiram as expectativas de qualidade e precisão. A dificuldade em modelar a lógica das preferências do usuário foi um dos principais obstáculos.
+- Rigor dos dados: O csv acaba forçando o Usuário a ser muito rígido no momento de passar os dados.
+
+### Possíveis Melhorias
+- Exploração de Outras Tecnologias: Considerar a possibilidade de explorar outras tecnologias para complementar o prolog na tarefa de fazer um sistemas de recomendação, ex: JS para um front-end.
+- Feedback Contínuo dos Usuários: Independentemente do foco do aplicativo, coletar feedback dos usuários para ajustar e melhorar o aplicativo com base nas necessidades e preferências reais.
+- Documentação e Transferência de Conhecimento: Documentar os aprendizados e as experiências adquiridas durante o projeto, a fim de facilitar a transferência de conhecimento para equipes futuras.
+- User-Friendly: Uma boa melhora seria deixar o aplicativo mais amigável do ponto de vista do usuário.
+- Filtro de nome: Este filtro está carregado com uma complexidade muito grande, talvez diminuir essa complexidade.
 
 ## Fontes
-Referencie, adequadamente, as referências utilizadas.
-Indique ainda sobre fontes de leitura complementares.
+> Bos, P. (s.d.). Learn Prolog Now! Disponível em: [](http://www.let.rug.nl/bos/lpn//lpnpage.php?pageid=manuals)
