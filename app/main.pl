@@ -101,9 +101,27 @@ busca_personalizada :-
 listar_jogos_por_nome(Find) :-
     max_jogos_por_pagina(MaxPorPagina),
     findall(jogo(Nome, Plataforma, Ano, Genero), 
-            (jogo(_, Nome, Plataforma, Ano, Genero, _), atom_concat(' ', Nome, Find)),
+            (jogo(_, Nome, Plataforma, Ano, Genero, _), jogos_semelhantes(Find,Nome)),
             Jogos),
-    paginar_e_listar_jogos(Jogos, MaxPorPagina).
+    list_to_set(Jogos,JogosSemDuplicatas),
+    paginar_e_listar_jogos(JogosSemDuplicatas, MaxPorPagina).
+    
+jogos_semelhantes(Find, Nome) :-
+    downcase_atom(Find, FindMinusculo),
+    downcase_atom(Nome, NomeMinusculo),
+    atom_chars(FindMinusculo, ListaFind),
+    atom_chars(NomeMinusculo, ListaNome),
+    remover_caracteres_especiais(ListaFind, ListaFindProcessada),
+    remover_caracteres_especiais(ListaNome, ListaNomeProcessada),
+    atomic_list_concat(ListaFindProcessada, ' ', FindProcessado),
+    atomic_list_concat(ListaNomeProcessada, ' ', NomeProcessado),
+    sub_atom(NomeProcessado, _, _, _, FindProcessado).
+    
+remover_caracteres_especiais([], []).
+    remover_caracteres_especiais([' ' | Resto], Processada) :-
+    remover_caracteres_especiais(Resto, Processada).
+    remover_caracteres_especiais([Char | Resto], [Char | Processada]) :-
+    remover_caracteres_especiais(Resto, Processada).
 
 listar_jogos_por_plataforma(Plataforma) :-
     max_jogos_por_pagina(MaxPorPagina),
