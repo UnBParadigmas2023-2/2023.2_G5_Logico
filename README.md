@@ -66,7 +66,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Pedro Henrique Nogueira |  | Excelente |
 | Guilherme Keyti Cabral Kishimoto |  | Excelente |
 | Arthur Taylor |  | Excelente |
-| Iago Cabral | | Excelente |
+| Iago Cabral | criação da estrutura da main | Boa |
 | Felipe Alef | Sistema de filtro por publicadora doa jogos | Excelente |
 | Nicolas Roberto |  | Excelente |
 |  Thiago Oliveira |   | Excelente |
