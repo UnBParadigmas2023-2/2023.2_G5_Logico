@@ -69,7 +69,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Felipe Alef | Sistema de filtro por publicadora doa jogos | Excelente |
 | Nicolas Roberto | Criar filtro por gênero | Excelente |
 |  Thiago Oliveira |   | Excelente |
-|  José Filipi Brito |  | Excelente |
+|  José Filipi Brito | - Paginação e organização do menu e lista de jogos | Excelente |
 ## Outros 
 ### Lições Aprendidas
 - Transição do Projeto: Tivemos inicialmente dificuldades na criação de um sistema de recomendação de jogos em Prolog devido às complexidades do paradigma lógico e da lógica de inferência.
