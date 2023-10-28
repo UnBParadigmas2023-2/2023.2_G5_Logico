@@ -60,11 +60,11 @@ TEMPO: +/- 15min
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
-| Matheus Soares | - Definição das estruturas do projeto.<br>- Semear banco de conhecimento prolog com CSV.<br>- Ajuda com sistema de filtro por nome. | Boa |
+| Matheus Soares | - Definição das estruturas do projeto.<br>- Semear banco de conhecimento prolog com CSV.<br>- Ajuda com sistema de filtro por nome. | Excelente |
 | Pedro Henrique Nogueira | - Filtro de plataforma<br>- Filtro de ano | Excelente |
 | Guilherme Keyti Cabral Kishimoto | - Criação do Menu e logica basica de filtro  | Excelente |
 | Arthur Taylor |- Filtro plataforma<br> - Filtro por genero  | Excelente |
-| Iago Cabral | - Criação da estrutura da main | Boa |
+| Iago Cabral | - Criação da estrutura da main | Excelente |
 | Felipe Alef | - Sistema de filtro por publicadora doa jogos | Excelente |
 | Nicolas Roberto | - Criar filtro por gênero | Excelente |
 |  Thiago Oliveira | - Filtro por nome   | Excelente |
