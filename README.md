@@ -22,7 +22,6 @@
 O projeto fundamenta-se no uso de um CSV disponibilizado pela Kaggle ([Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales)) onde a partir dele ocorre a semeação dos Fatos do Prolog, dessa forma possibilitando uma vasta gama de perguntas e recomendações para o usuário. O objetivo é que o usuário seja capaz de descobrir baseado na sua plataforma preferida, data e genêro, todos os jogos que são de sua preferência. Outras pesquisas baseadas em nome também são possíveis.
 
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 ![Menu de opções](./img/img1.jpeg)
 ![Página de jogos](./img/img2.jpeg)
 
@@ -61,14 +60,14 @@ TEMPO: +/- 15min
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
-| Matheus Soares | - Definição das estruturas do projeto.<br>- Semear banco de conhecimento prolog com CSV.<br>- Ajuda com sistema de filtro por nome. | Excelente |
-| Pedro Henrique Nogueira |  | Excelente |
-| Guilherme Keyti Cabral Kishimoto | Criação do Menu e logica basica de filtro  | Excelente |
-| Arthur Taylor |  | Excelente |
-| Iago Cabral | criação da estrutura da main | Boa |
-| Felipe Alef | Sistema de filtro por publicadora doa jogos | Excelente |
-| Nicolas Roberto | Criar filtro por gênero | Excelente |
-|  Thiago Oliveira |   | Excelente |
+| Matheus Soares | - Definição das estruturas do projeto.<br>- Semear banco de conhecimento prolog com CSV.<br>- Ajuda com sistema de filtro por nome. | Boa |
+| Pedro Henrique Nogueira | - Filtro de plataforma<br>- Filtro de ano | Excelente |
+| Guilherme Keyti Cabral Kishimoto | - Criação do Menu e logica basica de filtro  | Excelente |
+| Arthur Taylor |- Filtro plataforma<br> - Filtro por genero  | Excelente |
+| Iago Cabral | - Criação da estrutura da main | Boa |
+| Felipe Alef | - Sistema de filtro por publicadora doa jogos | Excelente |
+| Nicolas Roberto | - Criar filtro por gênero | Excelente |
+|  Thiago Oliveira | - Filtro por nome   | Excelente |
 |  José Filipi Brito | - Paginação e organização do menu e lista de jogos | Excelente |
 ## Outros 
 ### Lições Aprendidas
